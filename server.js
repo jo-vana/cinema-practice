@@ -31,7 +31,7 @@ app.get('/api', function(req, res) {
   });
 });
 
-let offlineData = JSON.parse(fs.readFileSync(path.resolve('./api_offline.json'), 'utf-8'));
+let offlineData = JSON.parse(fs.readFileSync(path.resolve('./api_sample.json'), 'utf-8'));
 app.get('/offline_api', function(req, res) {
   let data = offlineData.find(item => item.imdbID === req.query.i);
   if (!data) {

@@ -15,8 +15,8 @@ import VueResource from 'vue-resource';
 Vue.use(VueResource);
 
 import moment from 'moment-timezone';
-moment.tz.setDefault('UTC');
-Object.defineProperty(Vue.prototype, '$moment',{get() {return this.$root.moment} });
+moment.tz.setDefault("UTC");
+Object.defineProperty(Vue.prototype, '$moment', { get() {return this.$root.moment} });
 
 new Vue ({
     el:'#app',
